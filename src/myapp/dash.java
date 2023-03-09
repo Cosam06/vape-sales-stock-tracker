@@ -3,29 +3,36 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package guiappmacua;
+package myapp;
 
-import java.awt.Color;
-import Internalpages.*;
+import Internalpages.Userpage;
 import Internalpages.dashBoardPage;
+import Internalpages.settingsPage;
+import java.awt.Color;
 
-public class dashboard extends javax.swing.JFrame {
+
+
+public class dash extends javax.swing.JFrame {
 
     /**
      * Creates new form dashboard
      */
-    public dashboard() {
+    public dash() {
         initComponents();
     }
-    Color navcolor = new Color(255, 153, 0);
-    Color headcolor = new Color(255, 102, 102);
-    Color bodycolor = new Color(255, 153, 153);
+    Color navcolor = new Color(204,204,204);
+    Color headcolor = new Color(255,102,102);
+    Color bodycolor = new Color(102,102,102);
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        header = new javax.swing.JPanel();
+        settings = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        maindesktop = new javax.swing.JDesktopPane();
         navbar = new javax.swing.JPanel();
         dashpane = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -33,18 +40,60 @@ public class dashboard extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         reportspane = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        header = new javax.swing.JPanel();
-        maindesktop = new javax.swing.JDesktopPane();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 153, 102));
         jPanel1.setLayout(null);
 
-        navbar.setBackground(new java.awt.Color(255, 153, 0));
+        header.setBackground(new java.awt.Color(255, 102, 102));
+        header.setForeground(new java.awt.Color(255, 102, 51));
+        header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        settings.setBackground(new java.awt.Color(255, 102, 102));
+        settings.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                settingsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                settingsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                settingsMouseExited(evt);
+            }
+        });
+        settings.setLayout(null);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/icons8-settings-50.png"))); // NOI18N
+        settings.add(jLabel6);
+        jLabel6.setBounds(0, 0, 50, 60);
+
+        header.add(settings, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 50, 60));
+
+        jPanel1.add(header);
+        header.setBounds(180, 0, 590, 60);
+
+        maindesktop.setBackground(new java.awt.Color(102, 102, 102));
+
+        javax.swing.GroupLayout maindesktopLayout = new javax.swing.GroupLayout(maindesktop);
+        maindesktop.setLayout(maindesktopLayout);
+        maindesktopLayout.setHorizontalGroup(
+            maindesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 590, Short.MAX_VALUE)
+        );
+        maindesktopLayout.setVerticalGroup(
+            maindesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 490, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(maindesktop);
+        maindesktop.setBounds(180, 60, 590, 490);
+
+        navbar.setBackground(new java.awt.Color(204, 204, 204));
         navbar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        dashpane.setBackground(new java.awt.Color(255, 153, 0));
+        dashpane.setBackground(new java.awt.Color(204, 204, 204));
         dashpane.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 dashpaneMouseClicked(evt);
@@ -62,9 +111,9 @@ public class dashboard extends javax.swing.JFrame {
         jLabel1.setText("USER PAGE");
         dashpane.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
-        navbar.add(dashpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 140, 50));
+        navbar.add(dashpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 140, 50));
 
-        userpane.setBackground(new java.awt.Color(255, 153, 0));
+        userpane.setBackground(new java.awt.Color(204, 204, 204));
         userpane.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 userpaneMouseClicked(evt);
@@ -83,9 +132,9 @@ public class dashboard extends javax.swing.JFrame {
         jLabel2.setText("DASHBOARD ");
         userpane.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
-        navbar.add(userpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 140, 50));
+        navbar.add(userpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 140, 50));
 
-        reportspane.setBackground(new java.awt.Color(255, 153, 0));
+        reportspane.setBackground(new java.awt.Color(204, 204, 204));
         reportspane.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 reportspaneMouseEntered(evt);
@@ -100,43 +149,13 @@ public class dashboard extends javax.swing.JFrame {
         jLabel3.setText("REPORTS ");
         reportspane.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
-        navbar.add(reportspane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 140, 50));
+        navbar.add(reportspane, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 120, 50));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/vape2.jpg"))); // NOI18N
+        navbar.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, 130, -1, 450));
 
         jPanel1.add(navbar);
-        navbar.setBounds(0, 0, 140, 550);
-
-        header.setBackground(new java.awt.Color(255, 102, 102));
-        header.setForeground(new java.awt.Color(255, 102, 51));
-
-        javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
-        header.setLayout(headerLayout);
-        headerLayout.setHorizontalGroup(
-            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
-        );
-        headerLayout.setVerticalGroup(
-            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(header);
-        header.setBounds(140, 0, 630, 40);
-
-        maindesktop.setBackground(new java.awt.Color(255, 153, 153));
-
-        javax.swing.GroupLayout maindesktopLayout = new javax.swing.GroupLayout(maindesktop);
-        maindesktop.setLayout(maindesktopLayout);
-        maindesktopLayout.setHorizontalGroup(
-            maindesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
-        );
-        maindesktopLayout.setVerticalGroup(
-            maindesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 510, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(maindesktop);
-        maindesktop.setBounds(140, 40, 630, 510);
+        navbar.setBounds(0, 0, 180, 550);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -187,6 +206,19 @@ public class dashboard extends javax.swing.JFrame {
         maindesktop.add(up).setVisible(true);
     }//GEN-LAST:event_dashpaneMouseClicked
 
+    private void settingsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsMouseEntered
+      settings.setBackground(bodycolor);
+    }//GEN-LAST:event_settingsMouseEntered
+
+    private void settingsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsMouseExited
+       settings.setBackground(headcolor);
+    }//GEN-LAST:event_settingsMouseExited
+
+    private void settingsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsMouseClicked
+      settingsPage set = new settingsPage();
+      maindesktop.add(set).setVisible(true);
+    }//GEN-LAST:event_settingsMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -204,20 +236,21 @@ public class dashboard extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new dashboard().setVisible(true);
+                new dash().setVisible(true);
             }
         });
     }
@@ -228,10 +261,13 @@ public class dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JDesktopPane maindesktop;
     private javax.swing.JPanel navbar;
     private javax.swing.JPanel reportspane;
+    private javax.swing.JPanel settings;
     private javax.swing.JPanel userpane;
     // End of variables declaration//GEN-END:variables
 }

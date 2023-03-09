@@ -39,7 +39,7 @@ public class Userpage extends javax.swing.JInternalFrame {
 
         jLabel1.setFont(new java.awt.Font("Gloucester MT Extra Condensed", 1, 36)); // NOI18N
         jLabel1.setText("THIS IS USER PAGE");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, 250, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 250, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
