@@ -71,7 +71,7 @@ Color navcolor = new Color(102,102,102);
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 140));
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(420, 20, 190, 140);
+        jPanel3.setBounds(390, 40, 190, 140);
 
         jLabel1.setFont(new java.awt.Font("High Tower Text", 1, 24)); // NOI18N
         jLabel1.setText("Account Settings");
@@ -98,7 +98,7 @@ Color navcolor = new Color(102,102,102);
         jPanel1.add(jLabel13);
         jLabel13.setBounds(10, 120, 300, 30);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 664, 242));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 242));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setLayout(null);
