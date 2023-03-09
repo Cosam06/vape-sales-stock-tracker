@@ -68,7 +68,7 @@ Color navcolor = new Color(102,102,102);
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/samsam2.jpg"))); // NOI18N
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 140));
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 210, 140));
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(390, 40, 190, 140);
@@ -178,7 +178,7 @@ Color navcolor = new Color(102,102,102);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/result.png"))); // NOI18N
         jPanel2.add(jLabel11);
-        jLabel11.setBounds(-70, -220, 610, 770);
+        jLabel11.setBounds(-50, -210, 610, 770);
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 670, 370));
 
