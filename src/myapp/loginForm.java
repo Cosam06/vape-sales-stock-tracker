@@ -99,7 +99,7 @@ public class loginForm extends javax.swing.JFrame {
                 jLabel8MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 170, 10, 40));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 170, 20, 40));
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, -180, 600, 430);
@@ -167,7 +167,7 @@ public class loginForm extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel3.setText("Login");
-        login.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 50, 30));
+        login.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 40, 30));
 
         jPanel3.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 100, 30));
 

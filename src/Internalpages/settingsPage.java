@@ -62,6 +62,7 @@ Color navcolor = new Color(102,102,102);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jPanel1.setLayout(null);
 
         jPanel3.setBackground(new java.awt.Color(102, 102, 102));
@@ -98,7 +99,7 @@ Color navcolor = new Color(102,102,102);
         jPanel1.add(jLabel13);
         jLabel13.setBounds(10, 120, 300, 30);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 242));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 242));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setLayout(null);
@@ -180,7 +181,7 @@ Color navcolor = new Color(102,102,102);
         jPanel2.add(jLabel11);
         jLabel11.setBounds(-50, -210, 610, 770);
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 670, 370));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 600, 370));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

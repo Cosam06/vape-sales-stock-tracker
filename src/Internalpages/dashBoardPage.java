@@ -43,6 +43,7 @@ public class dashBoardPage extends javax.swing.JInternalFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         settings = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -72,12 +73,17 @@ public class dashBoardPage extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("High Tower Text", 1, 24)); // NOI18N
         jLabel1.setText("Vape Sales & Stock Tracker ");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(20, 20, 440, 70);
+        jLabel1.setBounds(20, -10, 440, 70);
 
         jLabel2.setFont(new java.awt.Font("High Tower Text", 1, 18)); // NOI18N
-        jLabel2.setText("Cosams' VapeShop INC.");
+        jLabel2.setText("Cosam's VapeShop INC.");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(20, 80, 300, 30);
+        jLabel2.setBounds(20, 40, 300, 30);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/69-removebg-preview.png"))); // NOI18N
+        jLabel10.setText("jLabel10");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(0, 20, 630, 260);
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 180));
 
@@ -158,7 +164,7 @@ public class dashBoardPage extends javax.swing.JInternalFrame {
         jPanel2.add(jLabel11);
         jLabel11.setBounds(-100, -220, 610, 770);
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 580, 300));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 640, 300));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -190,6 +196,7 @@ public class dashBoardPage extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

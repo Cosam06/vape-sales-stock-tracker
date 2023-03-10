@@ -7,6 +7,7 @@ package myapp;
 
 import Internalpages.Userpage;
 import Internalpages.dashBoardPage;
+import Internalpages.dontClick;
 import Internalpages.settingsPage;
 import java.awt.Color;
 import javax.swing.JOptionPane;
@@ -33,6 +34,7 @@ public class dash extends javax.swing.JFrame {
         header = new javax.swing.JPanel();
         minimize = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         maindesktop = new javax.swing.JDesktopPane();
         navbar = new javax.swing.JPanel();
         dashpane = new javax.swing.JPanel();
@@ -71,7 +73,15 @@ public class dash extends javax.swing.JFrame {
                 jLabel8MouseClicked(evt);
             }
         });
-        header.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, -1, -1));
+        header.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, 20, -1));
+
+        jLabel6.setText("DONT CLICK");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+        header.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jPanel1.add(header);
         header.setBounds(170, 0, 600, 60);
@@ -174,7 +184,7 @@ public class dash extends javax.swing.JFrame {
         navbar.add(account, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 170, 50));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/vape2.jpg"))); // NOI18N
-        navbar.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-130, 110, 370, 450));
+        navbar.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, 160, 300, 410));
 
         jPanel1.add(navbar);
         navbar.setBounds(0, 0, 170, 550);
@@ -252,6 +262,11 @@ public class dash extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jLabel8MouseClicked
 
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+       dontClick set = new dontClick();
+      maindesktop.add(set).setVisible(true);
+    }//GEN-LAST:event_jLabel6MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -297,6 +312,7 @@ public class dash extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JDesktopPane maindesktop;
