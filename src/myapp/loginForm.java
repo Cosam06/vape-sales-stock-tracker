@@ -5,6 +5,7 @@
  */
 package myapp;
 
+import Internalpages.NewJFrame;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import javax.swing.BorderFactory;
@@ -173,6 +174,11 @@ public class loginForm extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel4.setText("              New User? Click here to Register");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 330, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/9696.jpg"))); // NOI18N
@@ -251,6 +257,12 @@ if(a==JOptionPane.YES_OPTION){
     System.exit(0);
 }  
     }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+   NewJFrame db = new NewJFrame();
+    db.setVisible(true);
+    this.hide();
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments

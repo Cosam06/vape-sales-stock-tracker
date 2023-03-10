@@ -38,7 +38,7 @@ public class dontClick extends javax.swing.JInternalFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/degadz-removebg-preview.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, 240, 240));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 240, 240));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("WANT TO JOIN?");
@@ -48,7 +48,7 @@ public class dontClick extends javax.swing.JInternalFrame {
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 310, 240));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/degadz-removebg-preview.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 50, 310, 240));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 60, 310, 240));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/johny1-removebg-preview-removebg-preview.png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, -1, -1));
