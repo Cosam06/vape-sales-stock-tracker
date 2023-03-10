@@ -34,7 +34,7 @@ public class productForm extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        close = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         add = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         edit = new javax.swing.JPanel();
@@ -72,20 +72,15 @@ public class productForm extends javax.swing.JFrame {
         jPanel2.add(jLabel1);
         jLabel1.setBounds(10, 0, 210, 40);
 
-        close.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        close.setText("X");
-        close.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel9.setText("X");
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                closeMouseClicked(evt);
+                jLabel9MouseClicked(evt);
             }
         });
-        close.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                closeKeyPressed(evt);
-            }
-        });
-        jPanel2.add(close);
-        close.setBounds(670, 10, 20, 23);
+        jPanel2.add(jLabel9);
+        jLabel9.setBounds(670, 0, 10, 40);
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 40));
 
@@ -280,15 +275,12 @@ public class productForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_search4ActionPerformed
 
-    private void closeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeMouseClicked
-        int a=JOptionPane.showConfirmDialog(null,"Confirm Exit?");
-        if(a==JOptionPane.YES_OPTION);
-        System.exit(0);
-    }//GEN-LAST:event_closeMouseClicked
-
-    private void closeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_closeKeyPressed
-
-    }//GEN-LAST:event_closeKeyPressed
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        int a=JOptionPane.showConfirmDialog(null,"Are you sure?");
+        if(a==JOptionPane.YES_OPTION){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jLabel9MouseClicked
 
     /**
      * @param args the command line arguments
@@ -327,7 +319,6 @@ public class productForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel add;
-    private javax.swing.JLabel close;
     private javax.swing.JPanel delete;
     private javax.swing.JPanel edit;
     private javax.swing.JComboBox<String> jComboBox1;
@@ -341,6 +332,7 @@ public class productForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

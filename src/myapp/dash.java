@@ -31,8 +31,8 @@ public class dash extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         header = new javax.swing.JPanel();
-        close = new javax.swing.JLabel();
         minimize = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         maindesktop = new javax.swing.JDesktopPane();
         navbar = new javax.swing.JPanel();
         dashpane = new javax.swing.JPanel();
@@ -55,20 +55,6 @@ public class dash extends javax.swing.JFrame {
         header.setForeground(new java.awt.Color(255, 102, 51));
         header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        close.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        close.setText("X");
-        close.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                closeMouseClicked(evt);
-            }
-        });
-        close.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                closeKeyPressed(evt);
-            }
-        });
-        header.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, 20, -1));
-
         minimize.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         minimize.setText("—");
         minimize.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -76,7 +62,16 @@ public class dash extends javax.swing.JFrame {
                 minimizeMouseClicked(evt);
             }
         });
-        header.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 0, 20, -1));
+        header.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 0, 20, 20));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel8.setText("X");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+        header.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, -1, -1));
 
         jPanel1.add(header);
         header.setBounds(170, 0, 600, 60);
@@ -179,7 +174,7 @@ public class dash extends javax.swing.JFrame {
         navbar.add(account, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 170, 50));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/vape2.jpg"))); // NOI18N
-        navbar.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, 110, 370, 450));
+        navbar.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-130, 110, 370, 450));
 
         jPanel1.add(navbar);
         navbar.setBounds(0, 0, 170, 550);
@@ -246,19 +241,16 @@ public class dash extends javax.swing.JFrame {
       maindesktop.add(set).setVisible(true);
     }//GEN-LAST:event_accountMouseClicked
 
-    private void closeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_closeKeyPressed
-     
-    }//GEN-LAST:event_closeKeyPressed
-
     private void minimizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minimizeMouseClicked
         setState(ICONIFIED);
     }//GEN-LAST:event_minimizeMouseClicked
 
-    private void closeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeMouseClicked
-   int a=JOptionPane.showConfirmDialog(null,"Confirm Exit?");
-     if(a==JOptionPane.YES_OPTION);
-        System.exit(0);
-    }//GEN-LAST:event_closeMouseClicked
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        int a=JOptionPane.showConfirmDialog(null,"Are you sure?");
+        if(a==JOptionPane.YES_OPTION){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jLabel8MouseClicked
 
     /**
      * @param args the command line arguments
@@ -298,7 +290,6 @@ public class dash extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel account;
-    private javax.swing.JLabel close;
     private javax.swing.JPanel dashpane;
     private javax.swing.JPanel header;
     private javax.swing.JLabel jLabel1;
@@ -306,6 +297,7 @@ public class dash extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JDesktopPane maindesktop;
     private javax.swing.JLabel minimize;
