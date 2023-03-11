@@ -24,9 +24,9 @@ public class dashBoardPage extends javax.swing.JInternalFrame {
         bi.setNorthPane(null); 
         
     }
-    Color navcolor = new Color(255, 153, 0);
-    Color headcolor = new Color(255, 102, 102);
-    Color bodycolor = new Color(255, 153, 153);
+    Color navcolor = new Color(255,153,0);
+    Color headcolor = new Color(255,102,102);
+    Color bodycolor = new Color(255,153,153);
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -17,15 +17,17 @@ public class dashboard extends javax.swing.JFrame {
     public dashboard() {
         initComponents();
     }
-    Color navcolor = new Color(255, 153, 0);
+    Color navcolor = new Color(255,153,0);
     Color headcolor = new Color(255, 102, 102);
-    Color bodycolor = new Color(255, 153, 153);
+    Color bodycolor = new Color(255,153,153);
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        header = new javax.swing.JPanel();
+        maindesktop = new javax.swing.JDesktopPane();
         navbar = new javax.swing.JPanel();
         dashpane = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -33,77 +35,11 @@ public class dashboard extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         reportspane = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        header = new javax.swing.JPanel();
-        maindesktop = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 153, 102));
         jPanel1.setLayout(null);
-
-        navbar.setBackground(new java.awt.Color(255, 153, 0));
-        navbar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        dashpane.setBackground(new java.awt.Color(255, 153, 0));
-        dashpane.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                dashpaneMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                dashpaneMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                dashpaneMouseExited(evt);
-            }
-        });
-        dashpane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 24)); // NOI18N
-        jLabel1.setText("USER PAGE");
-        dashpane.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
-
-        navbar.add(dashpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 140, 50));
-
-        userpane.setBackground(new java.awt.Color(255, 153, 0));
-        userpane.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                userpaneMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                userpaneMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                userpaneMouseExited(evt);
-            }
-        });
-        userpane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 24)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("DASHBOARD ");
-        userpane.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
-
-        navbar.add(userpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 140, 50));
-
-        reportspane.setBackground(new java.awt.Color(255, 153, 0));
-        reportspane.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                reportspaneMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                reportspaneMouseExited(evt);
-            }
-        });
-        reportspane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 24)); // NOI18N
-        jLabel3.setText("REPORTS ");
-        reportspane.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
-
-        navbar.add(reportspane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 140, 50));
-
-        jPanel1.add(navbar);
-        navbar.setBounds(0, 0, 140, 550);
 
         header.setBackground(new java.awt.Color(255, 102, 102));
         header.setForeground(new java.awt.Color(255, 102, 51));
@@ -128,7 +64,7 @@ public class dashboard extends javax.swing.JFrame {
         maindesktop.setLayout(maindesktopLayout);
         maindesktopLayout.setHorizontalGroup(
             maindesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
+            .addGap(0, 640, Short.MAX_VALUE)
         );
         maindesktopLayout.setVerticalGroup(
             maindesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,7 +72,71 @@ public class dashboard extends javax.swing.JFrame {
         );
 
         jPanel1.add(maindesktop);
-        maindesktop.setBounds(140, 40, 630, 510);
+        maindesktop.setBounds(140, 40, 640, 510);
+
+        navbar.setBackground(new java.awt.Color(255, 153, 0));
+        navbar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        dashpane.setBackground(new java.awt.Color(255, 153, 0));
+        dashpane.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dashpaneMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                dashpaneMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                dashpaneMouseExited(evt);
+            }
+        });
+        dashpane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 24)); // NOI18N
+        jLabel1.setText("USER PAGE");
+        dashpane.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        navbar.add(dashpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 140, 50));
+
+        userpane.setBackground(new java.awt.Color(255, 153, 0));
+        userpane.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                userpaneMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                userpaneMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                userpaneMouseExited(evt);
+            }
+        });
+        userpane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 24)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("DASHBOARD ");
+        userpane.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        navbar.add(userpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 140, 50));
+
+        reportspane.setBackground(new java.awt.Color(255, 153, 0));
+        reportspane.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                reportspaneMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                reportspaneMouseExited(evt);
+            }
+        });
+        reportspane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 24)); // NOI18N
+        jLabel3.setText("REPORTS ");
+        reportspane.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        navbar.add(reportspane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 140, 50));
+
+        jPanel1.add(navbar);
+        navbar.setBounds(0, 0, 140, 550);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
