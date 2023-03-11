@@ -5,36 +5,31 @@
  */
 package Internalpages;
 
-import java.awt.Color;
-import javax.swing.plaf.basic.BasicInternalFrameUI;
 
+
+import java.awt.Color;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+import javax.swing.plaf.basic.BasicInternalFrameUI;
+import myapp.*;
 /**
  *
- * @author SCC-PC
+ * @author Sam
  */
-public class dashBoardPage extends javax.swing.JInternalFrame {
+public class settingsPage extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form dashBoardPage
+     * Creates new form settingsPage
      */
-    public dashBoardPage() {
+    public settingsPage() {
         initComponents();
-        
-        
-       this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         BasicInternalFrameUI bi = (BasicInternalFrameUI) this.getUI();
         bi.setNorthPane(null); 
-        
     }
-<<<<<<< HEAD
-    Color navcolor = new Color(255,153,0);
-    Color headcolor = new Color(255,102,102);
-    Color bodycolor = new Color(255,153,153);
-=======
-    Color navcolor = new Color(102,102,102);
+Color navcolor = new Color(102,102,102);
     Color headcolor = new Color(0,255,255);
     Color bodycolor = new Color(255, 153, 153);
->>>>>>> 69e7ce0ebbc3f488f8be95486a516ab05f824428
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -50,8 +45,10 @@ public class dashBoardPage extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        settings = new javax.swing.JPanel();
+        logout = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         manager = new javax.swing.JPanel();
@@ -65,60 +62,74 @@ public class dashBoardPage extends javax.swing.JInternalFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jPanel1.setLayout(null);
 
         jPanel3.setBackground(new java.awt.Color(102, 102, 102));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/meowk1.jpg"))); // NOI18N
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 120));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/samsam2.jpg"))); // NOI18N
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 210, 140));
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(360, 20, 190, 140);
+        jPanel3.setBounds(390, 40, 190, 140);
 
         jLabel1.setFont(new java.awt.Font("High Tower Text", 1, 24)); // NOI18N
-        jLabel1.setText("Vape Sales & Stock Tracker ");
+        jLabel1.setText("Account Settings");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(20, -10, 440, 70);
+        jLabel1.setBounds(10, 0, 440, 40);
 
         jLabel2.setFont(new java.awt.Font("High Tower Text", 1, 18)); // NOI18N
-        jLabel2.setText("Cosam's VapeShop INC.");
+        jLabel2.setText("Address: Vito Minglanilla Cebu");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(20, 40, 300, 30);
+        jLabel2.setBounds(10, 160, 300, 30);
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/69-removebg-preview.png"))); // NOI18N
-        jLabel10.setText("jLabel10");
+        jLabel10.setFont(new java.awt.Font("High Tower Text", 1, 18)); // NOI18N
+        jLabel10.setText("Account Name: Cosam John A. Macua");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(0, 20, 630, 260);
+        jLabel10.setBounds(10, 50, 360, 30);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 180));
+        jLabel12.setFont(new java.awt.Font("High Tower Text", 1, 18)); // NOI18N
+        jLabel12.setText("Position: Administrator");
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(10, 80, 300, 40);
+
+        jLabel13.setFont(new java.awt.Font("High Tower Text", 1, 18)); // NOI18N
+        jLabel13.setText("Email: sammacua23@gmailcom");
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(10, 120, 300, 30);
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 242));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setLayout(null);
 
-        settings.setBackground(new java.awt.Color(0, 255, 255));
-        settings.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        settings.setForeground(new java.awt.Color(204, 204, 204));
-        settings.setPreferredSize(new java.awt.Dimension(170, 170));
-        settings.addMouseListener(new java.awt.event.MouseAdapter() {
+        logout.setBackground(new java.awt.Color(0, 255, 255));
+        logout.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        logout.setForeground(new java.awt.Color(204, 204, 204));
+        logout.setPreferredSize(new java.awt.Dimension(170, 170));
+        logout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logoutMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                settingsMouseEntered(evt);
+                logoutMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                settingsMouseExited(evt);
+                logoutMouseExited(evt);
             }
         });
-        settings.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        logout.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/icons8-gear-100.png"))); // NOI18N
-        settings.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 100, 90));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/icons8-logout-rounded-100.png"))); // NOI18N
+        logout.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 100, 90));
 
         jLabel4.setFont(new java.awt.Font("High Tower Text", 1, 18)); // NOI18N
-        jLabel4.setText("Settings");
-        settings.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 80, -1));
+        jLabel4.setText("Logout");
+        logout.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 80, -1));
 
-        jPanel2.add(settings);
-        settings.setBounds(400, 90, 140, 150);
+        jPanel2.add(logout);
+        logout.setBounds(400, 40, 140, 150);
 
         manager.setBackground(new java.awt.Color(0, 255, 255));
         manager.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -137,11 +148,11 @@ public class dashBoardPage extends javax.swing.JInternalFrame {
         manager.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 120, -1));
 
         jLabel6.setFont(new java.awt.Font("High Tower Text", 1, 18)); // NOI18N
-        jLabel6.setText("Manager User ");
+        jLabel6.setText("Manage User");
         manager.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 150, -1));
 
         jPanel2.add(manager);
-        manager.setBounds(20, 90, 170, 150);
+        manager.setBounds(20, 40, 160, 150);
 
         reports.setBackground(new java.awt.Color(0, 255, 255));
         reports.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -164,16 +175,24 @@ public class dashBoardPage extends javax.swing.JInternalFrame {
         reports.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 80, -1));
 
         jPanel2.add(reports);
-        reports.setBounds(210, 90, 150, 150);
+        reports.setBounds(210, 40, 150, 150);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconsfolder/result.png"))); // NOI18N
         jPanel2.add(jLabel11);
-        jLabel11.setBounds(-100, -220, 610, 770);
+        jLabel11.setBounds(-50, -210, 610, 770);
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 640, 300));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 600, 370));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+             
+    private void logoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseEntered
+        logout.setBackground(navcolor);       
+    }//GEN-LAST:event_logoutMouseEntered
+
+    private void logoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseExited
+         logout.setBackground(headcolor);
+    }//GEN-LAST:event_logoutMouseExited
 
     private void managerMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_managerMouseEntered
         manager.setBackground(navcolor);
@@ -188,22 +207,23 @@ public class dashBoardPage extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_reportsMouseEntered
 
     private void reportsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reportsMouseExited
-        reports.setBackground(headcolor);
+       reports.setBackground(headcolor);
     }//GEN-LAST:event_reportsMouseExited
 
-    private void settingsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsMouseEntered
-        settings.setBackground(navcolor);
-    }//GEN-LAST:event_settingsMouseEntered
-
-    private void settingsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsMouseExited
-         settings.setBackground(headcolor);
-    }//GEN-LAST:event_settingsMouseExited
+    private void logoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseClicked
+      JFrame mainFrame = (JFrame)SwingUtilities.getWindowAncestor(this);
+      mainFrame.dispose();
+     loginForm If = new loginForm();
+     If.setVisible(true);
+    }//GEN-LAST:event_logoutMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -215,8 +235,8 @@ public class dashBoardPage extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel logout;
     private javax.swing.JPanel manager;
     private javax.swing.JPanel reports;
-    private javax.swing.JPanel settings;
     // End of variables declaration//GEN-END:variables
 }
